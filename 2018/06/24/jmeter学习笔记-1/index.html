@@ -17,7 +17,8 @@
 <meta property="og:description" content="我有什么JMeter书呢？看看积淀读书笔记">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://mmaxing.github.io/img/tupian1.png">
-<meta property="og:updated_time" content="2018-12-02T07:00:07.553Z">
+<meta property="og:image" content="https://mmaxing.github.io/img/tupian1.png">
+<meta property="og:updated_time" content="2018-12-03T12:13:56.858Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jmeter学习笔记-1">
 <meta name="twitter:description" content="我有什么JMeter书呢？看看积淀读书笔记">
@@ -180,10 +181,7 @@
         <p>day1:受苦比改变现状容易的多</p>
 <p>#常用测试元件<br>1.线程组<br>线程组是任何测试计划的起点，所有的逻辑控制器和采样器都必须放在线程组之下。用来管理执行测试所需的Jmeter线程。通过线程组面板可以：<br><a id="more"></a><br><strong>线程数</strong>：设置线程数量。<br><strong>Ramp-Up Period(in seconds)</strong>：设置线程启动周期。<br><strong>循环次数</strong>：设置循环次数，勾选永远时，一般和调度器配合使用。<br><strong>调度器</strong>：可以设定测试运行的“启动时间”和“结束时间”，但当设定了“启动延迟”会使“启动时间”无效，设定“持续时间”会使“结束时间”无效。<br><img src="https://mmaxing.github.io/img/tupian1.png" alt="Alt Text" title="线程组元件"><br>2.控制器<br>JMeter有两种类型的控制器：采样器和逻辑控制器。采样器被用来向服务器发送请求，逻辑控制器用来控制JMeter的测试逻辑。</p>
 <blockquote>
-<p>采样器<br>  采样器发送请求到指定服务器，按在测试树中的顺序执行，配合逻辑控制器，可以改变运行次数。常用的采样器：HTTP Request, JDBC Request, Java object Request…</p>
-</blockquote>
-<blockquote>
-<p>逻辑控制器</p>
+<p>采样器<br>  采样器发送请求到指定服务器，按在测试树中的顺序执行，配合逻辑控制器，可以改变运行次数。常用的采样器：HTTP Request, JDBC Request, Java object Request…<br><img src="https://mmaxing.github.io/img/tupian1.png" alt="Alt Text" title="HTTP Sampler"><br>逻辑控制器<br> 逻辑控制器，包括两类无件，一类是用于控制test plan 中 sampler 节点发送请求的逻辑顺序的控制器，常用的有 如果（If）控制器 、 switch Controller 、Runtime Controller、循环控制器等。另一类是用来组织可控制 sampler 来节点的， 如 事务控制器、吞吐量控制器。</p>
 </blockquote>
 
       
