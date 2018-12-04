@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="我有什么JMeter书呢？看看积淀读书笔记">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://mmaxing.github.io/img/tupian1.png">
-<meta property="og:image" content="https://mmaxing.github.io/img/tupian1.png">
-<meta property="og:updated_time" content="2018-12-03T12:13:56.858Z">
+<meta property="og:image" content="https://github.com/MMaXing/MMaXing.github.io/blob/master/img/threadgroup.png">
+<meta property="og:image" content="https://github.com/MMaXing/MMaXing.github.io/blob/master/img/HTTP%20Sampler.png">
+<meta property="og:updated_time" content="2018-12-03T14:41:44.268Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jmeter学习笔记-1">
 <meta name="twitter:description" content="我有什么JMeter书呢？看看积淀读书笔记">
-<meta name="twitter:image" content="https://mmaxing.github.io/img/tupian1.png">
+<meta name="twitter:image" content="https://github.com/MMaXing/MMaXing.github.io/blob/master/img/threadgroup.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -178,11 +178,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>day1:受苦比改变现状容易的多</p>
-<p>#常用测试元件<br>1.线程组<br>线程组是任何测试计划的起点，所有的逻辑控制器和采样器都必须放在线程组之下。用来管理执行测试所需的Jmeter线程。通过线程组面板可以：<br><a id="more"></a><br><strong>线程数</strong>：设置线程数量。<br><strong>Ramp-Up Period(in seconds)</strong>：设置线程启动周期。<br><strong>循环次数</strong>：设置循环次数，勾选永远时，一般和调度器配合使用。<br><strong>调度器</strong>：可以设定测试运行的“启动时间”和“结束时间”，但当设定了“启动延迟”会使“启动时间”无效，设定“持续时间”会使“结束时间”无效。<br><img src="https://mmaxing.github.io/img/tupian1.png" alt="Alt Text" title="线程组元件"><br>2.控制器<br>JMeter有两种类型的控制器：采样器和逻辑控制器。采样器被用来向服务器发送请求，逻辑控制器用来控制JMeter的测试逻辑。</p>
+        <hr>
+<h1 id="JMeter简介"><a href="#JMeter简介" class="headerlink" title="JMeter简介"></a>JMeter简介</h1><p>&nbsp;&nbsp;&nbsp;&nbsp;Apache JMeter是100%纯JAVA桌面应用程序，被设计为用于web应用测试。它可以用来测试静态和动态资源的性能，例如：静态文件，Java Servlet,CGI Scripts,Java Object,数据库和FTP服务器等等。JMeter可用于模拟大量负载来测试一台服务器，网络或者对象的健壮性或者分析不同负载下的整体性能。<br>&nbsp;&nbsp;&nbsp;&nbsp;同时，JMeter能够对你应用程序进行功能/回归测试。通过创建的测试脚本和assertions来验证被测程序返回了所期待的值。为了更高的灵活性，JMeter允许使用正则表达式来创建断言.</p>
+<a id="more"></a>
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;JMeter执行顺序：配置元件，前置处理器，定时器，采样器，后置处理器，断言，监听器。逻辑控制器和采样器按照在测试计划中出现的顺序执行。常用的测试元件有：</strong></p>
+<h2 id="1-线程组"><a href="#1-线程组" class="headerlink" title="1.线程组"></a>1.线程组</h2><p>线程组是任何测试计划的起点，所有的逻辑控制器和采样器都必须放在线程组之下。用来管理执行测试所需的Jmeter线程。通过线程组面板可以：</p>
 <blockquote>
-<p>采样器<br>  采样器发送请求到指定服务器，按在测试树中的顺序执行，配合逻辑控制器，可以改变运行次数。常用的采样器：HTTP Request, JDBC Request, Java object Request…<br><img src="https://mmaxing.github.io/img/tupian1.png" alt="Alt Text" title="HTTP Sampler"><br>逻辑控制器<br> 逻辑控制器，包括两类无件，一类是用于控制test plan 中 sampler 节点发送请求的逻辑顺序的控制器，常用的有 如果（If）控制器 、 switch Controller 、Runtime Controller、循环控制器等。另一类是用来组织可控制 sampler 来节点的， 如 事务控制器、吞吐量控制器。</p>
+<p><strong>线程数</strong>：设置线程数量。<br><strong>Ramp-Up Period(in seconds)</strong>：设置线程启动周期。<br><strong>循环次数</strong>：设置循环次数，勾选永远时，一般和调度器配合使用。<br><strong>调度器</strong>：可以设定测试运行的“启动时间”和“结束时间”，但当设定了“启动延迟”会使“启动时间”无效，设定“持续时间”会使“结束时间”无效。</p>
 </blockquote>
+<p><img src="https://github.com/MMaXing/MMaXing.github.io/blob/master/img/threadgroup.png" alt="Alt Text" title="线程组元件"></p>
+<h2 id="2-控制器"><a href="#2-控制器" class="headerlink" title="2.控制器"></a>2.控制器</h2><p>JMeter有两种类型的控制器：采样器和逻辑控制器。采样器被用来向服务器发送请求，逻辑控制器用来控制JMeter的测试逻辑。</p>
+<blockquote>
+<p>采样器<br>  采样器发送请求到指定服务器，按在测试树中的顺序执行，配合逻辑控制器，可以改变运行次数。常用的采样器：HTTP Request, JDBC Request, Java object Request…</p>
+</blockquote>
+<p><img src="https://github.com/MMaXing/MMaXing.github.io/blob/master/img/HTTP%20Sampler.png" alt="Alt Text" title="HTTP Sampler"></p>
+<blockquote>
+<p>逻辑控制器<br> 逻辑控制器，包括两类无件，一类是用于控制test plan 中 sampler 节点发送请求的逻辑顺序的控制器，常用的有 如果（If）控制器 、 switch Controller 、Runtime Controller、循环控制器等。另一类是用来组织可控制 sampler 节点的， 如 事务控制器、吞吐量控制器。</p>
+</blockquote>
+<h2 id="3-监听器"><a href="#3-监听器" class="headerlink" title="3.监听器"></a>3.监听器</h2><p> &nbsp;&nbsp;&nbsp;&nbsp;监听器是用来对测试结果数据进行处理和可视化展示的一系列元件。常用到的元件有：图形结果、查看结果树、聚合报告、用表格查看结果。</p>
+<h2 id="4-定时器"><a href="#4-定时器" class="headerlink" title="4.定时器"></a>4.定时器</h2><p> 定时器（Timer）为JMeternal请求设置等待时间，等待时间是性能测试中常用的控制客户端TPS的手段，类似于LoadRunner里面的“思考时间”。 JMeter 定义了Bean Shell Timer、固定定时器、高斯随机定时器等。<br> 定时器会让作用域内的每一个采样器都在执行前等待一段时间，线程组下如果有多个定时器，JMeter会将定时器的时长叠加起来，共同印象作用域范围内的采样器。</p>
+<h2 id="5-断言"><a href="#5-断言" class="headerlink" title="5.断言"></a>5.断言</h2><p> 用于检查测试中得到的响应数据等是否符合预期，断言一般用来设置检查点，用以保证性能测试过程中的响应数据是否与预期一致。</p>
+<p> 参考书籍：零成本实现WEB性能测试 基于APACHE JMETER</p>
 
       
 
@@ -335,7 +351,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JMeter简介"><span class="toc-number">1.</span> <span class="toc-text">JMeter简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-线程组"><span class="toc-number">1.1.</span> <span class="toc-text">1.线程组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-控制器"><span class="toc-number">1.2.</span> <span class="toc-text">2.控制器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-监听器"><span class="toc-number">1.3.</span> <span class="toc-text">3.监听器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-定时器"><span class="toc-number">1.4.</span> <span class="toc-text">4.定时器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-断言"><span class="toc-number">1.5.</span> <span class="toc-text">5.断言</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
